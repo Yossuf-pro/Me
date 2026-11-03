@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10110f"><meta name="description" content="اسأل مساعدًا معرفيًا متعدد اللغات واستكشف إجابات مع مراجع من ويكيبيديا.">
+    <title>الموسوعة AI | يوسف</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="assets/site.css">
+    <script src="assets/site.js" defer></script>
+    <script src="assets/assistant-config.js" defer></script>
+    <script src="assets/assistant.js" defer></script>
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <header class="site-header"><nav class="nav container" aria-label="التنقل الرئيسي">
+        <a class="brand" href="index.html"><span class="brand-mark">ي</span><span>يوسف<span class="brand-dot">.</span></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="فتح القائمة"><span></span><span></span></button>
+        <div class="nav-links" id="nav-links"><a href="index.html">الرئيسية</a><a href="about.html">من أنا</a><a href="projects.html">المشاريع</a><a href="vision.html">الرؤية</a><a href="assistant.html" aria-current="page">الموسوعة AI</a><a href="contact.html">تواصل</a></div>
+        <div class="nav-actions"><button class="icon-button theme-toggle" type="button" aria-label="تبديل المظهر" title="تبديل المظهر"><span class="theme-glyph">◐</span></button><a class="nav-cta" href="index.html">الرئيسية <span>↗</span></a></div>
+    </nav></header>
+    <main class="assistant-main">
+        <section class="assistant-intro container">
+            <div class="assistant-intro-copy reveal">
+                <span class="eyebrow"><span class="status-pulse"></span> موسوعة تفاعلية مجانية</span>
+                <h1>اسأل العالم.<br><span class="gradient-text">بأي لغة.</span></h1>
+                <p class="lead">مساعد معرفي يشرح لك الأفكار بأسلوبك، ويبحث عن مراجع ويكيبيديا المناسبة للغة سؤالك.</p>
+                <div class="assistant-badges"><span>✦ متعدد اللغات</span><span>⌕ مراجع قابلة للفتح</span><span>◉ لا يحتاج مفتاح API</span></div>
+                <p class="assistant-limit-note">يعمل ضمن الحصة المجانية اليومية لـ Cloudflare Workers AI (10,000 Neurons يوميًا حاليًا). الاستخدام مجاني ضمن الحصة؛ وبعدها يتوقف حتى إعادة ضبطها، ولا نفعّل أي خطة مدفوعة.</p>
+            </div>
+            <div class="assistant-orbit-scene reveal reveal-delay-1" aria-hidden="true">
+                <div class="assistant-nebula"></div><div class="assistant-orbit orbit-one"></div><div class="assistant-orbit orbit-two"></div><div class="assistant-orbit orbit-three"></div>
+                <div class="assistant-core"><span>AI</span></div><i class="assistant-star star-one">✦</i><i class="assistant-star star-two">✳</i><i class="assistant-star star-three">·</i>
+            </div>
+        </section>
+        <section class="chat-section container">
+            <div class="chat-shell">
+                <header class="chat-header">
+                    <div class="chat-brand"><span class="chat-brand-icon">✳</span><div><strong>موسوعة العالم</strong><span><i class="chat-live-dot"></i><span data-chat-status>مساعدك جاهز للأسئلة</span></span></div></div>
+                    <div class="chat-controls">
+                        <label class="language-control"><span>لغة المراجع</span><select data-source-language aria-label="لغة مراجع الموسوعة"><option value="auto" selected>تلقائي</option><option value="ar">العربية</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="ru">Русский</option><option value="uk">Українська</option><option value="zh">中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="hi">हिन्दी</option><option value="ur">اردو</option><option value="tr">Türkçe</option></select></label>
+                        <button class="chat-clear" type="button" data-chat-clear title="مسح المحادثة">محادثة جديدة <span aria-hidden="true">↻</span></button>
+                    </div>
+                </header>
+                <div class="chat-messages" data-chat-messages role="log" aria-live="polite" aria-label="المحادثة">
+                    <article class="chat-message assistant-message welcome-message">
+                        <div class="message-avatar">✳</div>
+                        <div class="message-content"><div class="message-meta">الموسوعة <span>•</span> هنا لأجلك</div><p>أهلًا يوسف! اسألني عن العلوم، التاريخ، اللغات، أو أي فكرة تشغلك. أقدر أبحث لك عن مراجع مرتبطة بسؤالك وأشارك روابطها.</p><p class="message-footnote">أنا نموذج ذكاء اصطناعي؛ قد أخطئ، فتحقق من المصادر في المواضيع المهمة.</p></div>
+                    </article>
+                </div>
+                <div class="suggestion-row" aria-label="أسئلة مقترحة">
+                    <button class="suggestion-chip" type="button" data-prompt="اشرح لي الذكاء الاصطناعي بطريقة بسيطة مع أمثلة">ما هو الذكاء الاصطناعي؟ <span>↗</span></button>
+                    <button class="suggestion-chip" type="button" data-prompt="ما الفرق بين الطاقة الشمسية وطاقة الرياح؟">الطاقة المتجددة <span>↗</span></button>
+                    <button class="suggestion-chip" type="button" data-prompt="Tell me one fascinating fact about the ocean and cite a source.">Ask in English <span>↗</span></button>
+                </div>
+                <form class="chat-composer" data-chat-form>
+                    <label class="visually-hidden" for="chat-question">اكتب سؤالك للموسوعة</label>
+                    <textarea id="chat-question" name="question" rows="1" maxlength="1200" placeholder="اكتب سؤالك هنا… أو تحدّث بلغتك" required data-chat-input></textarea>
+                    <div class="composer-bottom"><span class="composer-hint">Enter للإرسال · Shift + Enter لسطر جديد · حتى 1200 حرف</span><button class="send-button" type="submit" aria-label="إرسال السؤال" data-send-button><span aria-hidden="true">↑</span></button></div>
+                </form>
+                <footer class="chat-disclosure"><span>ⓘ تُرسل رسالتك إلى Cloudflare AI وبحث ويكيبيديا لتحضير الإجابة. لا تحفظ هذه الصفحة المحادثة بعد إغلاقها.</span><span data-api-availability>تحقق من جاهزية الخدمة...</span></footer>
+            </div>
+            <div class="assistant-notes"><span>📚 المراجع تُحمّل من ويكيبيديا بلغات متعددة.</span><span>🌐 جودة اللغات تختلف حسب نموذج الذكاء الاصطناعي المتاح.</span><span>⏸ تتوقف الخدمة عند نفاد الحصة اليومية المجانية.</span></div>
+        </section>
+        <section class="section container assistant-faq">
+            <div class="section-heading reveal"><div><span class="eyebrow">بوضوح وشفافية</span><h2>أسئلة قبل أن تسأل.</h2></div></div>
+            <div class="faq-grid">
+                <details class="faq-card reveal"><summary>هل الاستخدام مجاني فعلًا؟</summary><p>نستخدم حصة Workers AI المجانية من Cloudflare: 10,000 Neurons يوميًا حسب سياسة الخدمة الحالية. لا نضيف وسيلة دفع للمشروع. إذا وصلت الحصة اليومية، قد تتوقف الإجابات حتى موعد إعادة الضبط.</p></details>
+                <details class="faq-card reveal reveal-delay-1"><summary>هل يدعم كل لغات العالم؟</summary><p>يمكنك كتابة سؤالك بلغات كثيرة، ويرد النموذج بلغتك غالبًا. لا أضمن جميع اللغات أو دقتها بنفس المستوى؛ ويتوفر البحث المرجعي في اللغات المدرجة في اختيار «لغة المراجع».</p></details>
+                <details class="faq-card reveal reveal-delay-2"><summary>هل الإجابات موثوقة دائمًا؟</summary><p>لا. النموذج قد يخطئ، والمراجع المتاحة مقتطفات من ويكيبيديا وليست بديلًا عن المختصين أو المصادر الرسمية. افتح الروابط وتحقق من المعلومات المهمة.</p></details>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-main"><a class="brand" href="index.html"><span class="brand-mark">ي</span><span>يوسف<span class="brand-dot">.</span></span></a><p>موقع شخصي خيالي للتعبير والإلهام.</p><div class="footer-links"><a href="about.html">من أنا</a><a href="projects.html">الأفكار</a><a href="contact.html">تواصل</a></div><button class="back-top" type="button" data-back-top aria-label="العودة للأعلى">↑</button></div><div class="container footer-bottom"><span>© <span data-year></span> يوسف</span><span>صُنع بفضول وقليل من السحر ✦</span><span class="fiction-note">الشخصية والمسمّى خياليان، وليسا رسميين.</span></div></footer>
+</body>
+</html>

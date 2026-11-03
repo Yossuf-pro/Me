@@ -23,6 +23,15 @@ jobs:
     steps:
       - name: Check out website
         uses: actions/checkout@v4
+      - name: Configure encyclopedia endpoint
+        env:
+          AI_WORKER_URL: ${{ vars.AI_WORKER_URL }}
+        run: |
+          if [ -z "$AI_WORKER_URL" ]; then
+            echo "::notice::Set the AI_WORKER_URL repository variable to enable the optional AI assistant."
+            exit 0
+          fi
+          node -e 'const fs=require("node:fs"); const url=new URL(process.env.AI_WORKER_URL); if(url.protocol!=="https:"||url.pathname!=="/"||url.search||url.hash) throw new Error("AI_WORKER_URL must be an HTTPS origin without a path."); fs.writeFileSync("assets/assistant-config.js", `window.YOUSEF_AI_API_URL = ${JSON.stringify(url.origin)};\n`);'
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website files
